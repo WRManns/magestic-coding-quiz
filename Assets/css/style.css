@@ -3,14 +3,42 @@ body {
     background-image: url('../images/matrix-1120x630.jpg');
 }
 
+header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 3.5rem;
+    width: 100%;
+    background-color: black;
+    color: rgb(205, 233, 195);
+    align-content: center;
+    justify-content: space-between;
+}
+
+
 a {
     text-decoration: none;
-    color: rgb(205, 233, 195);
-}
-
-.highscore {
-    background-color: rgb(18, 27, 24);
     font-size: 1.5rem;
     color: rgb(205, 233, 195);
+    padding: .5rem;
+    margin-top: 1rem;
+        
 }
 
+.timer {
+    float: end;
+    font-size: 2rem;
+    color: rgb(205, 233, 195);
+    padding: .5rem;
+    margin-right: 3rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-box {
+    background-color: black;
+    color: rgb(205, 233, 195);
+    margin-top: 5rem;
+}
