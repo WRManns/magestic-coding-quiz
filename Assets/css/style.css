@@ -16,16 +16,17 @@ header {
 
 
 a {
+    
     text-decoration: none;
     font-size: 1.5rem;
     color: rgb(205, 233, 195);
     padding: .5rem;
-    margin-top: 1rem;
+    
         
 }
 
 .timer {
-    float: end;
+    justify-self: end;
     font-size: 2rem;
     color: rgb(205, 233, 195);
     padding: .5rem;
