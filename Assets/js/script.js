@@ -10,10 +10,12 @@ function setTime() {
       
   
       if(timeLeft === 0) {
+         // Clears interval and runs endGame function
+          clearInterval(timer);
+          endGame();
+        }
         clearInterval(timerInterval);
-      }
-  //sets timer to 1 second intervals
-    }, 1000);
+      }, 1000);  
 }
 
 setTime();
