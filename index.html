@@ -17,30 +17,38 @@
             <a href='.\highscore.html'>HIGH SCORES</a>
         </div>
         
-        <div class='timer'></div>
+        <div class='timer'> Time: <span id= 'time'></span></div>
 
         
     </header>
 
-    <main>
-        <div class='quiz-head'>
+    <section id= "quiz-home">
+        <div>
+            <div id='home-head'>
             <h1>Gettin Quizzy With It</h1>
-        </div>
-        <div class='quiz-box'>
-            <div class='questions col-6'>
-
-            </div>
-            <div class='answers col-6'>
-
-            </div>  
-            <section class=btn>
-                <button id="strt-btn" class="btn">Quiz Me</button>
-                </section>        
-        </div>
+            <p>Gonna add instructions later</p></div>
         
+            <button id="start-btn" class="btn">Quiz Me</button> 
+        </div>
+    </section>
+    <section id="quiz-card" style="display: none">
+        <div id= "quiz">
+            <div id="quesions"></div>
+            <div id="answers"></div>
+        </div>
+</section>
+
+    <div id= "end-screen" style="display: none">
+        <h1>QUIZ OVER</h1>
+        <p>Your final score is <span id='end-score'></span>.</p>
+        <p>
+            Enter Your Initials: <input type='text' id='initials' max='3' />
+            <button id='submit-btn' class ='btn'>SUBMIT</button>
+        </p>
+    </div>
         
-    </main>
     <script src=".\Assets\js\script.js"></script>
+    
 </body>
 
 </html>

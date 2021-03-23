@@ -6,7 +6,7 @@ body {
     background-image: url('../images/matrix-1120x630.jpg');
 }
 
-
+ 
 
 header {
     display: flex;
@@ -23,8 +23,8 @@ header {
     margin-top: 1rem;  
 }
 
-.timer {
-    margin-bottom: .5rem;
+.hide {
+    display: none;
 }
 
 a {
@@ -44,25 +44,40 @@ a {
     margin-right: 3rem;
 }
 
-main {
+#quiz-home {
     display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.btn {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: black;
+    color: rgb(205, 233, 195);
+    height: 3rem;
+    width: 8rem;    
+
+}
+
+#home-head {
+    background-color: black;
+    color: rgb(205, 233, 195);
+    margin-top: 0rem;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#quiz-box {
+    display:block;
+    background-color: black;
+    color: rgb(205, 233, 195);
+    margin-top: 5rem;
     flex-direction: row;
     justify-content: center;
 }
 
-#strt-btn {
-    background-color: black;
-    color: rgb(205, 233, 195);
-
-}
-.quiz-head {
-    background-color: black;
-    color: rgb(205, 233, 195);
-    margin-top: 5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
