@@ -124,6 +124,7 @@ function displayScore() {
 }
 //stores score in local storage
 function addScore () {
+  //no matter how user enters intials, they will be displayed as uppercase
   var initials = userInitials.value.toUpperCase();  
 
   var newScore = {
