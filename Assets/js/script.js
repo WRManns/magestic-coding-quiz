@@ -1,3 +1,4 @@
+//object to hold all the questions, answerchoices as arrays, and correct corresponding answers
 var javaQuestions = [
   {
       question: "Commonly used data types DO NOT include:",
@@ -31,6 +32,7 @@ var javaQuestions = [
   }
 ];
 
+//variables tied to html elements, and empty global variable for use in functions
 var timerEl = document.getElementById("time");
 var startBtn = document.getElementById("start-btn");
 var submitBtn = document.getElementById("submit-btn");
@@ -45,7 +47,7 @@ var currentQuestion = 0;
 var questionNumber = 0;
 var answer;
 
-
+//the Quiz function. removes the start screen and displays quiz card and first question. Also, begins the timer function
 function startQuiz() {
   document.getElementById("quiz-home").style.display = "none";
   document.getElementById("quiz-card").style.display = "block";
@@ -53,28 +55,31 @@ function startQuiz() {
   startTimer()
   getQuestion()
 }
-
+//funtion that sets the timer, timer interval, and begins the countdown
 function startTimer() {
   timer = setInterval(function() {
     timerCount--;
     timerEl.textContent = timerCount;
-
+//if function that checks to see if there is any time left on the clock, or if there are any questions left to answer
+//if there is either no time or questions left, it stops the timer and runs the endGame function
     if (timerCount === 0 || questionNumber === javaQuestions.length) {
       clearInterval(timer);
       setTimeout(endGame, 500);       
     }
   }, 1000);
 }
+//funtion to call the questions. they follow sequence in the object.
 
 function getQuestion() {    
 
     quizContainer.textContent = javaQuestions[questionNumber].question;
     choiceContainer.innerHTML = "";
-
+//this calls the corresponding correct answer to each question
     answer = javaQuestions[questionNumber].answer;
-
+//calling the choices associated with each question
     var choices = javaQuestions[questionNumber].choices;
     questionNumber++;
+    //creating button elements for each answer choice available
     for (var q = 0; q < choices.length; q++) {
         var nextChoice = document.createElement("button");
 
@@ -102,7 +107,7 @@ choiceContainer.addEventListener("click", function (event) {
       pElement.innerHTML = "Correct.";
       setTimeout(hideFeedback,1225);
       showFeedback();   
-      
+      //if incorrect, ten seconds will be removed from timer
   } else {
       pElement.innerHTML = "Incorrect.";
       timerCount = timerCount - 10;
@@ -111,11 +116,11 @@ choiceContainer.addEventListener("click", function (event) {
   }   
   getQuestion(); 
 });
-
+//displays the score to be called at the endGame screen
 function displayScore() {
   userScore.textContent= timerCount;
 }
-
+//stores score in local storage
 function addScore () {
   var initials = userInitials.value.toUpperCase();  
 
@@ -141,6 +146,6 @@ startBtn.addEventListener("click", startQuiz);
 submitBtn.addEventListener("click", function (event) {
   event.stopPropagation();
   addScore();
-
+//links to the highscore html page on click
   window.location.href= "./highscore.html"
 });
