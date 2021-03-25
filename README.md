@@ -10,6 +10,8 @@ Clicking the Submit button also brings user to the highscore page
 Scores and intitals are retrieved from local storage to dynamically create table rows to display
 User is offered buttons to clear Highscore list and return to the quiz's start page
 
+Deployed App: https://wrmanns.github.io/magestic-coding-quiz/
+
 ![JSCodeQuiz_scrnshot1](./Assets/images/Screenshots/Code_Quiz-ScrnShot1.PNG)
 ![JSCodeQuiz_scrnshot2](./Assets/images/Screenshots/Code_Quiz-ScrnShot2.PNG)
 ![JSCodeQuiz_scrnshot3](./Assets/images/Screenshots/Code_Quiz-ScrnShot3.PNG)
