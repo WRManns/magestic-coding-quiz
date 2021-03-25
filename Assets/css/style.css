@@ -8,7 +8,6 @@ body {
 
 main {
     font-size: 2rem;
-    background-color: black;
     color: rgb(205, 233, 195);
     margin-top: 5rem;
     flex-direction: row;
@@ -49,9 +48,12 @@ a {
 }
 
 #quiz-home {
-    display: flex;
-    justify-content: center;
+    display: block;
+    justify-content: inherit;
     margin: 1rem;
+    margin-right: 15rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
@@ -61,16 +63,42 @@ a {
     color: rgb(205, 233, 195);
     height: 3rem;
     width: 8rem;    
+    margin: 1rem;
+}
 
+#start-btn {
+    margin-left: 50%;
 }
 
 #home-head {
-    background-color: black;
+    width: 40rem;
     color: rgb(205, 233, 195);
     margin-top: 0rem;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    
+}
+
+#home-head h1 {
+    margin-left: 50%;
+    background-color: black;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+
+}
+
+#home-head p {
+    margin-left: 50%;
+    margin-top: 0%;
+    background-color: black;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
 }
 
 #quiz {
@@ -81,5 +109,32 @@ a {
     flex-direction: row;
     justify-content: center;
 }
+
+.feedback {
+    float: right;
+    width: 20rem;
+    background-color: black;
+    
+}
+
+#choices {
+    margin-top: 1rem;
+    width: 100%;
+    height: 5rem;
+    background-color: black;
+    margin: 1rem;
+}
+
+#end-screen {
+    background-color: black;
+}
+
+#highscores {
+    background-color: black;
+    display: inline-table;
+}
+
+
+
 
 

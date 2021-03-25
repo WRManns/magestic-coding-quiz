@@ -38,7 +38,7 @@ var questionEl= document.getElementById("questions");
 var quizContainer= document.getElementById("quiz");
 var choiceContainer= document.getElementById("choices");
 var userScore= document.getElementById("end-score");
-var userInitials;
+var userInitials = document.getElementById("initials");
 var timer;
 var timerCount;
 var currentQuestion = 0;
@@ -105,6 +105,7 @@ choiceContainer.addEventListener("click", function (event) {
       
   } else {
       pElement.innerHTML = "Incorrect.";
+      timerCount = timerCount - 10;
       setTimeout(hideFeedback,1225);
       showFeedback();
   }   
@@ -116,10 +117,10 @@ function displayScore() {
 }
 
 function addScore () {
-  userInitials = document.getElementById("initials").value  
+  var initials = userInitials.value.toUpperCase();  
 
   var newScore = {
-      name: userInitials,
+      name: initials,
       score: timerCount
     };
     // check if there are scores

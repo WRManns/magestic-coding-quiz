@@ -11,7 +11,7 @@ function renderHighscore() {
         for (let i=0; i < highScores.length; i++) {
             var newHighscore = document.createElement("tr");
             var newCell = document.createElement("td");
-            newCell.textContent = (i + 1) + "." + highScores[i].name + " " + highScores[i].score;
+            newCell.textContent = (i + 1) + "." + highScores[i].name + ":   " + highScores[i].score;
             newHighscore.appendChild(newCell);
             highScoreTable.appendChild(newHighscore);
         }
