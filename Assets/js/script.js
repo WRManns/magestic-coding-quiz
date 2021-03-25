@@ -25,6 +25,8 @@ var javaQuestions = [
       choices: ["Javascript", "terminal/bash", "for loops", "console.log"],
       answer: "console.log"
   },
+  //empty object to deal with an issue of the if method in the startTimer function where the last question
+  //would render with answer choices and then move to end screen before input from user was obtained
   {
       question: "",
       choices: [],
